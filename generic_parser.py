@@ -42,3 +42,26 @@ print(data.head())
 #    print(item)
 
 print(data.shape)
+
+#2 "organize that file so we can access columns *or* rows of it easily
+#use of iloc: https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/
+
+# 2A. ACCESS any row
+
+print (data.iloc[3:5,:]) # inclusive the first value 3 but exclusive the last value 5
+
+# 2b access any column
+
+print (data.iloc[:3,-2:]) #-2 the last two
+
+# 2c access any value
+
+print(data.iloc[3,4])
+
+
+# 4.print those summary statistics
+
+import numpy as np
+
+print (np.mean(data))
+print (np.std(data))
